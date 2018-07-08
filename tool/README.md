@@ -27,7 +27,7 @@ $ F:\fakepath > tool.exe <type> <path 1> <path 2> [path 3]
 The Tool will:
 
 1.  Extract two core jars to `%OUTPUT%/extracts/`.
-1.  Push file names and file contents in `assets` in each jar to two different maps.
-1.  Compare the maps. Push the file names which has the same content to a new map.
+1.  Push file names and file md5 in `assets` in each jar to two different maps.
+1.  Compare the maps. Push the name of files which have the same md5 to a new map.
 1.  Format the new map as the specified type (`bb`, `ts` or `both`), and output to `%OUTPUT%/`
 1.  Delete `%OUTPUT%/extracts/`.

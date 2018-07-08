@@ -27,7 +27,7 @@ $ F:\fakepath > tool.exe <type> <path 1> <path 2> [path 3]
 工具会:
 
 1.  解压两个核心文件到 `%OUTPUT%/extracts/`.
-1.  分别将两个核心文件中 `assets` 里的文件名、文件内容 push 到两个不同的 map。
-1.  比较两个 map。将对应相同文件内容的两个文件名 push 到一个新的 map。
+1.  分别将两个核心文件中 `assets` 里的文件名、文件md5 push 到两个不同的 map。
+1.  比较两个 map。将对应相同md5的两个文件的文件名 push 到一个新的 map。
 1.  把新的 map 格式化为指定类型文件（`bb`, `ts` 或 `both`）并输出到 `%OUTPUT%/`。
 1.  删除 `%OUTPUT%/extracts/`.
