@@ -8,26 +8,29 @@
 
 ## 如何使用
 
-在命令行中执行以下命令：
+对于 Windows 用户，在命令行中执行以下命令：
 
 ```cmd
-$ F:\fakepath > tool.exe <type> <path 1> <path 2> [path 3]
+$ F:\fakepath > SpcTool.exe <type> <path 1> <path 2> [path 3]
 ```
+
+对于其他系统用户，我怎么知道【跑
 
 <!-- Awful table -->
 
 | 参数               | 类型   | 描述                                                                                                                                                                                                                        |
 | ------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| detail mode               | Boolean | _必须_. 如果设为 `true`, 工具会极其缓慢。 |
 | type               | String | _必须_. 可以是以下值中的一种： `bb`, `ts`, `both`. <br> **bb**: 输出 BBCode 样式的文件，可以直接粘贴到 [MCBBS](http://www.mcbbs.net) 并发布。 <br> **ts**: 输出 Typescript 代码文件。<br> **both**: 同时输出 `bb` 与 `ts`。 |
-| path 1 <br> path 2 | String | _必须_. Minecraft 核心 jar 文件的路径。 工具会自动解压并比较它们。                                                                                                                                                          |
-| path 3             | String | _可选_. 指定输出文件的路径。 默认值为`./output`。                                                                                                                                                                           |
+| path 1 <br> path 2 | String | _必须_. Minecraft 核心 jar 文件解压后的文件夹的路径。 工具会自动比较它们的差异。                                                                                                                                                          |
+| path 3             | String | _可选_. 指定输出文件的路径。 默认值为`./Output`。                                                                                                                                                                           |
 
 ## 原理
 
 工具会:
 
-1.  解压两个核心文件到 `%OUTPUT%/extracts/`.
+1.  解压两个核心文件到 `%OUTPUT%/Extracts/`.
 1.  分别将两个核心文件中 `assets` 里的文件名、文件md5 push 到两个不同的 map。
 1.  比较两个 map。将对应相同md5的两个文件的文件名 push 到一个新的 map。
 1.  把新的 map 格式化为指定类型文件（`bb`, `ts` 或 `both`）并输出到 `%OUTPUT%/`。
-1.  删除 `%OUTPUT%/extracts/`.
+1.  删除 `%OUTPUT%/Extracts/`.

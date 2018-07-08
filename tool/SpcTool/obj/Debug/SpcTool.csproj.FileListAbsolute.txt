@@ -1,0 +1,7 @@
+C:\SPGoding\project\spc\tool\SpcTool\bin\Debug\SpcTool.exe.config
+C:\SPGoding\project\spc\tool\SpcTool\bin\Debug\SpcTool.exe
+C:\SPGoding\project\spc\tool\SpcTool\bin\Debug\SpcTool.pdb
+C:\SPGoding\project\spc\tool\SpcTool\obj\Debug\SpcTool.csprojAssemblyReference.cache
+C:\SPGoding\project\spc\tool\SpcTool\obj\Debug\SpcTool.csproj.CoreCompileInputs.cache
+C:\SPGoding\project\spc\tool\SpcTool\obj\Debug\SpcTool.exe
+C:\SPGoding\project\spc\tool\SpcTool\obj\Debug\SpcTool.pdb

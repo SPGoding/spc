@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>false both C:\SPGoding\game\minecraft\.minecraft\versions\1.12.2-OptiFine_HD_U_E1\1.12.2-OptiFine_HD_U_E1\ C:\SPGoding\game\minecraft\.minecraft\versions\1.13-pre5\1.13-pre5\ C:\SPGoding\project\spc\tool\Output\</StartArguments>
+  </PropertyGroup>
+</Project>
