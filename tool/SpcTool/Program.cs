@@ -31,9 +31,9 @@ namespace SpcTool
                 checkArgs(config);
 
                 Console.WriteLine("Mapping Jar1...");
-                mapFiles(jar1, Path.Combine(config.Jar1Path, @"assets\minecraft\textures\"), config.Jar1Path);
+                mapFiles(jar1, Path.Combine(config.Jar1Path, @"assets\minecraft\textures\"), config.Jar1Path, 1);
                 Console.WriteLine("Mapping Jar2...");
-                mapFiles(jar2, Path.Combine(config.Jar2Path, @"assets\minecraft\textures\"), config.Jar2Path);
+                mapFiles(jar2, Path.Combine(config.Jar2Path, @"assets\minecraft\textures\"), config.Jar2Path, 2);
                 time1 = Environment.TickCount;
 
                 Console.WriteLine("Matching Files...");
@@ -143,7 +143,7 @@ namespace SpcTool
         //    Console.WriteLine("====== Finished ======");
         //}
 
-        private static void mapFiles(Dictionary<string, List<string>> dict, string path, string prefix)
+        private static void mapFiles(Dictionary<string, List<string>> dict, string path, string prefix, int jarID)
         {
             foreach (var file in Directory.GetFiles(path))
             {
@@ -165,18 +165,19 @@ namespace SpcTool
                 {
                     dict[md5].Add(name);
 
-                    // DELETE:
-                    if (dict[md5].Count == 2)
-                    {
-                        Console.WriteLine("Same MD5");
-                        Console.WriteLine(dict[md5][0]);
+                    if ((jarID == 1 && !specialCases.ContainsKey(name))) {
+                        if (dict[md5].Count == 2)
+                        {
+                            Console.WriteLine("Same MD5. Please add them into 'specialCases'.");
+                            Console.WriteLine(dict[md5][0]);
+                        }
+                        Console.WriteLine(name);
                     }
-                    Console.WriteLine(name);
                 }
             }
             foreach (var dir in Directory.GetDirectories(path))
             {
-                mapFiles(dict, Path.Combine(path, dir), prefix);
+                mapFiles(dict, Path.Combine(path, dir), prefix, jarID);
             }
         }
         
