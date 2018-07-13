@@ -31,6 +31,7 @@ namespace SpcTool
                 checkArgs(config);
 
                 Console.WriteLine("Mapping Jar1...");
+                Console.WriteLine("- Mapping Blocks...");
                 mapFiles(jar1, Path.Combine(config.Jar1Path, @"assets\minecraft\textures\"), config.Jar1Path, 1);
                 Console.WriteLine("Mapping Jar2...");
                 mapFiles(jar2, Path.Combine(config.Jar2Path, @"assets\minecraft\textures\"), config.Jar2Path, 2);
@@ -58,7 +59,7 @@ namespace SpcTool
             finally
             {
                 Console.WriteLine("Press any key to exit...");
-                Console.Read();
+                Console.ReadKey();
             }
         }
 
