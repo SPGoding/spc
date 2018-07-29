@@ -2,6 +2,10 @@
 
 [简体中文版](./README-zh.md) | **Poor English Edition**
 
+## Addition
+
+Some other people has finished a tool like spc. You can see it at [here](https://github.com/icrdr/Resource-Pack-Converter)
+
 ## What is This
 
 An online tool to convert Minecraft: Java Edition resource packs from format 3 to format 4.
